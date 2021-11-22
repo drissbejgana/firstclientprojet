@@ -1,0 +1,911 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lato:wght@100&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style Header */
+.logo{
+    width: 220px;
+    height: 75px;
+    margin-left:20px ;
+    word-spacing: 1px;
+    transition: all .5s linear;
+}
+header{
+    padding: 20px;
+    background-color:transparent;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding-top:30px ;
+    transition:background .5s linear ;
+}
+.nav-bar{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -50px;
+}
+.nav-bar li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-weight: bold;
+}
+.nav-bar li{
+    margin-left: 15px;
+}
+.nav-bar li a:hover{
+   color: rgba(255, 208, 0,10);
+}
+.myvedeo{
+    width: 100%;
+    position: relative;
+  }
+  .burger div {
+    width:30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    cursor: pointer;
+display: none;
+}
+
+
+  @media  (max-width: 991px) {
+
+    .myvedeo{
+        display: none;
+    }
+
+    .nav-bar{
+        flex-direction: column;
+        transform: translateY(-350px);
+        transition: transform .5s linear; 
+        height: 350px;
+        width: 100%;
+        justify-content: center;
+        background-color: rgb(24, 19, 34);
+        padding:15px;
+        align-items: center;
+        box-shadow: rgba(212, 198, 198, 0.24) 0px 3px 8px;
+    }
+ 
+    .nav-bar li{
+        margin-top: 15px;
+    }
+ 
+    .burger{
+        margin: auto;
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .burger div{
+      display: block;
+      position: relative;
+      transition: transform .3s linear;
+    }
+    .logo{
+       position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
+    }
+   
+
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    header{
+        height: 130px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.rows1 {
+    transform:rotate(40deg) translateY(10px);
+}
+.rows2 {
+    opacity:0;
+}
+.rows3 {
+   transform:rotate(-40deg) translateY(-10px);
+}
+
+@keyframes delay{
+    0%{
+        opacity:0;
+        transform: translateX(60px);
+    }
+  100%{
+        transform: translateX(0px);
+        opacity:1
+    }
+   }
+   @keyframes rotation{
+    from{
+        transform: rotateZ(130deg);
+    }
+    to{
+        transform: rotateZ(90deg);
+    }
+}
+.trans{
+    transform: translateY(150px);
+}
+
+
+/* Style Main */
+
+.container{
+background: transparent;
+width: 100%;
+height: 50%;
+position: absolute;
+top:20%;
+padding-top: 70px;
+}
+.container div > h1{
+    text-align: center;font-size:50px;
+    font-family: 'Source Sans Pro',Helvetica,Arial,Lucida,sans-serif;
+        position: relative;
+color: white;
+
+}
+.Red{
+    background-color:#E10812;
+    width: 300px;
+    padding: 8px 30px;
+    position: absolute;
+    transform: translate(170px,-30px)rotate(-5deg);
+}
+.Red h3{
+    color: white;
+    text-align: center;
+     letter-spacing: .8px;
+}
+.container div > h2{
+text-align: center;
+color: white;
+font-family: 'Josefin Slab', serif;
+margin-top: 15px;
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 80px;
+    margin-left: -50px;
+}
+.nav-list li{
+margin-left: 20px;
+background-color: #fdc619;
+padding: 7px 21px;
+transition: all .2s linear;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: #151119;
+    font-family: 'Prompt', sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+.nav-list li:hover {
+    box-shadow: 2px 2px 15px 5px #fdc619 ;
+}
+.man{
+    width: 400px;
+    height: 253px;
+    position: absolute;
+    transition: all .4s linear;
+    right: 0;
+    top:120px;
+}
+
+@media  (max-width: 991px) {
+       .Red{
+        left: 50%;
+        transform: translateX(-50%)rotate(0deg);
+        top: 50px;
+        font-size: 12px;
+      }
+    .Red h3{
+        margin: 0 !important;
+    }
+      .container div>h1{
+          margin-top: 30px;
+          font-size: 30px;
+      }
+      .container div >h2{
+        font-size: 20px;
+      }
+    .nav-list{
+            display: block;
+            margin: auto;
+        }
+        .nav-list li{
+         
+            text-align: center;
+            max-width: 160px;
+            margin: auto ;
+            margin-top: 15px;
+        }
+        .man{
+            width: 200px;
+            height: 200px;
+            transform: translate(5%,150%);
+        } 
+        
+}
+.sinta{
+    width: 5000px;
+    height: 40px;
+    transform: translateY(87px);
+    border: 4px solid gray;
+    background-color: black;
+    border-left: none;
+    border-right: none;
+    padding-top: 5px;
+    position: relative;
+    z-index: 10;
+}
+.sinta >span{
+    color: whitesmoke;
+    margin-left: 3000px;
+    animation: sinta 25s linear infinite;
+}
+
+@keyframes sinta{
+0%{
+    margin-left: 3000px;
+
+}
+100%{
+    margin-left: -50px;
+}
+}
+.brickwall{
+    height: 700px;
+    width: 100%;
+}
+.wall{
+    margin-top: 50px;
+    position: relative;
+}
+.wall >.h1,h4{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+   
+}
+.wall >h4{
+ color: red;
+}
+.h1{
+    color: white;
+    margin-top: 40px;
+    text-shadow: 2px 2px 20px white;
+}
+.redline{
+    position: absolute;
+    top: 150px;
+    width: 3px;
+    height: 200px;
+    background-color: red;
+    box-shadow: 2px 2px 20px red;
+    transform: rotate(90deg);
+    left: 50%;
+}
+.items{
+    display: flex;
+    position: absolute;
+    top: 330px;
+    justify-content: center;
+    width: 100%;
+}
+.items>.item{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    position: relative;
+}
+.item>img{
+width: 70px;
+height: 70px;
+filter: invert(1);
+background: transparent;
+
+}
+.item>p{
+    color: white;
+    margin-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.ghost{
+    position: relative;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.divghost{
+    width: 300px;
+    position: absolute;
+    background-color: black;
+    border:1px solid red;
+    box-shadow: 2px 2px 20px red;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin-top: 10px;
+    line-height: 25px;
+    padding: 15px 10px;
+ }
+    .divghost::after{
+        content: "";
+        background-color: transparent;
+        position: absolute;
+        left: 50%;
+        top: -15px;
+        transform: translateX(-50%);
+        border-bottom:7px solid red; 
+        border-top:7px solid transparent; 
+        border-right:7px solid transparent ; 
+        border-left:7px solid  transparent;  
+    } 
+.ghost2{
+    display: none;
+}
+@media (min-width: 460px){
+
+    .items{
+        flex-wrap: wrap; 
+        justify-content: space-around;
+     }
+     .item{
+        margin: 100px;
+    }
+}
+
+    @media  (max-width: 991px) {
+         .ghost{
+            display: none;
+        }
+
+           .wall>img{
+               height: 1800px;
+           }
+           .item>p{
+               font-size: 15px;
+               font-weight: bold;
+           }
+           .items{
+              flex-wrap: wrap; 
+           }
+          
+            .item{
+                margin-top: 100px;
+            }
+            .item>#p1::after{
+           content: "The SSB Token will generate large amounts of buying pressure and accelerated hyper deflationary burns with our unique tokenomics and multiple use cases.";
+           position: absolute;
+             bottom: -80%;
+             font-weight:initial;
+             word-wrap: break-word;
+             width: 300px;
+             left: 50%;
+             transform: translateX(-50%);
+            }
+            .item>#p2::after{
+                content: "The Leviathan buyback combined with our innovative lottery buyback will ensure a constant accelerated hyper-deflationary burn.";
+                position: absolute;
+                  bottom: -80%;
+             font-weight:initial;
+                  word-wrap: break-word;
+                  width: 300px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                 }
+                 .item>#p3::after{
+                    content: "Buy and Burn Method Additional Buying pressure and burns are generated by requiring SSB clients to BUY and BURN a set amount of SSB Tokens before paying the remaining balance.";
+                    position: absolute;
+                      bottom: -100%;
+                      word-wrap: break-word;
+                      width: 300px;
+                      left: 50%;
+                      transform: translateX(-50%);
+             font-weight:initial;
+
+                     }
+                     .item>#p4::after{
+                        content: "Exclusive access to “The Streets” NFT Marketplace and SSB Radio contests/giveaways.";
+                        position: absolute;
+                          bottom: -70%;
+                          word-wrap: break-word;
+                          width: 300px;
+                          left: 50%;
+                          transform: translateX(-50%);
+             font-weight:initial;
+
+                         }
+                         .item>#p5::after{
+                            content: "Stake SSB to earn WSB and a wide variety of other tokens listed on the staking platform.";
+                            position: absolute;
+                              bottom: -50%;
+                              word-wrap: break-word;
+                              width: 300px;
+                              font-weight:initial;
+                              left: 50%;
+                              transform: translateX(-50%);
+                             } 
+    }
+
+
+
+
+    .mession{
+        position: relative;
+    }
+.mession > .h1{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+}
+.yellowline{
+    position: absolute;
+    top: 70px;
+    width: 3px;
+    height: 200px;
+    background-color: #fdc619;
+    box-shadow: 2px 2px 20px #fdc619;
+    transform: rotate(90deg);
+    left: 50%;
+}
+.description{
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    width: 70%;
+    transform: translateX(-50%);
+}
+.description>h2{
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+@media  (max-width: 991px){
+    .mession{
+        height: 1320px;
+    }
+}
+
+.conataine{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    margin-top: -10px;
+    padding-top: 60px;
+}
+.Buyback{
+    background-color: rgb(19, 17, 17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.ssb{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.photo{
+    width: 200px;
+    height: 200px;
+}
+.photo>img{
+    width: 100%;
+    height: 100%;
+}
+
+.listt{
+    list-style-image:url("../right-arrow.png");
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 400px;
+}
+.listt li >p {
+    color: white;
+    line-height: 1.7em;
+        margin: 5px;
+        font-size: 18px
+}
+.listt li{
+    margin-top: 10px;
+}
+
+
+
+body{
+    height:4000px;
+    overflow-x: hidden;
+}
+.conataine h1{
+    text-shadow: 2px 2px 20px white;
+}
+.street img{
+width: 100%;
+height: 500px;
+}
+.street{
+    position: relative;
+}
+.hide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    opacity: .8;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: absolute;
+    margin-top: 20px;
+    top: 0;
+    align-items: center;
+    margin-left: 50px;
+}
+.info>h1{
+    text-shadow: 2px 2px 20px white;
+    margin-top: 20px;
+
+}
+.info> h3{
+    color: red;
+    text-shadow: 2px 2px 20px red;
+    margin-top: 20px;
+}.info>p{
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    margin-top: 25px;
+text-align: center;
+}
+.music>img{
+        width: 100%;
+        height: 600px;    
+}
+.music{
+    position: relative;
+}
+.audio{
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+.towimg{
+    width: 100%;
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: 20px;
+}
+#img1
+{
+       width: 250px;
+       height: 512;
+       margin-left: -45px;
+       z-index: -1;
+}
+#img2
+{
+   width: 150px;
+   height: 150px;
+   margin-left: 45px;
+   z-index: 77;
+}
+.desc{
+margin-top: 30px;
+margin-left: 120px;
+}
+.desc h1{
+    text-shadow: 2px 2px 20px white;
+    width: 400px;
+    margin: auto;
+}
+.desc h3{
+    color: #fdc619;
+    text-shadow: 2px 2px 20px #fdc619;
+    margin-top: 20px;
+text-align: center;
+}
+.desc>div{
+    width: 500px;
+}
+.desc>div>p{
+ color: white;
+ line-height: 30px;
+ font-size: 20px;
+ text-align: center;
+ margin-top: 20px;
+
+}
+
+@media  (max-width: 991px){
+    .conataine{
+        flex-wrap: wrap;
+    }
+    .audio{
+        flex-wrap: wrap;
+    }
+    .info{
+    margin-left: 0px;
+    }
+    #img1
+{
+       width: 100px;
+       height: 120;
+       margin-left: 0px;
+       z-index: -1;
+}
+.street{
+    width: 100%;
+}
+.street *{
+text-align: center;
+width: 100%;
+margin: auto;
+}
+#img2
+{
+   width: 50px;
+   height: 50px;
+
+}
+.towimg{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+    .music>img{
+        height: 1000px;
+    }
+.desc{
+    margin-left: 0;
+}
+.desc h3{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+.desc h1{
+    text-align: center;
+    width: 100%;
+}
+.desc>div{
+    width: 100%;
+}
+.ps{
+    text-align: center;
+    margin: 0;
+}
+
+  } 
+
+.sats{
+width: 500px;
+}
+.charts{
+    height: 400px;
+    width: 800px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-left: -50px;
+}
+.containercharts {
+    position: relative;
+}
+.containercharts .head{
+    position: absolute;
+    text-shadow: 2px 2px 20px white;
+    text-align: center;
+    width: 100%;
+    top: 0;
+}
+.containercharts img{
+    width: 100%;
+    height: 1000px;
+}
+.sats>h1{
+    color: #fdc619!important;  
+    text-shadow: 2px 2px 20px #fdc619;  
+}
+.sats{
+    margin-right: 20px;
+}
+.sats>h3{
+margin-top: 25px;
+}
+.sats >p{
+margin-top: 10px;
+}
+.sats >h3,p{
+color: white;
+text-align: center;
+}
+
+.chart2{
+  top: 600px;  
+justify-content: space-around;
+width: 100%;
+
+}
+
+@media  (max-width: 991px){
+    .charts{
+        flex-wrap: wrap;
+    }
+    .containercharts>img{
+        height: 2000px;
+    }
+    .sats{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .sats p,h3,.colorh1{
+        margin-left: 110px;
+    }
+ .autre{
+     height: 650px !important;
+   
+ }
+    .lines{
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+
+    }
+   
+   /* .bar{
+       width: 200px !important;
+       display: flex;
+       justify-content: center;
+       padding-left: 100px;
+   } */
+
+.pie{
+margin-top: 50px;
+  margin-left: 100px;
+    }
+.bar{
+    width: 500px !important ;
+    height: 290px !important;
+ margin-left: 220px;
+}
+/* .pie{
+    width: 300px !important ;
+} */
+
+}
+.bar{
+    width: 100% ;
+    height: 90%;
+}
+
+
+
+.autre{
+    height: 300px;
+    background-color: white;
+    margin-top: -5px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.autre>.title{
+color: red;
+font-weight: bold;
+}
+.lines{
+    display: flex;
+    list-style-type: none;
+    margin-top: 50px;
+    justify-content: space-around;
+    width: 100%;
+    margin-left:-100px ;
+}
+
+.lines li{
+    margin-left: 100px;
+}
+.lines li a img{
+    width: 75px;
+    height: 75px;
+}.lines li a span{
+      margin-top: 15px;
+}
+.lines li a{
+    text-decoration: none;
+    color:  black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+footer{
+    height: 600px;
+    width: 100%;
+    background-color: #000;
+    padding-top: 100px;
+}
+.foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot > img{
+    width: 200px;
+    height:178px;
+}
+.foot > div >a >img{
+    width: 50px;
+    height:50px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.foot > div >div{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
